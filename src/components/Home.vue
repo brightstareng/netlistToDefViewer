@@ -2,7 +2,11 @@
   <div style="text-align: center">
     <div style="font-size: xx-large">Vehicles</div>
     <div style="display: flex; flex-direction: column">
-      <router-link v-for="vehicle in vehicles" :key="vehicle" :to="vehicle">
+      <router-link
+        v-for="vehicle in vehicles"
+        :key="vehicle"
+        :to="'/Vehicle/' + vehicle"
+      >
         {{ vehicle.replace("_", " ") }}
       </router-link>
     </div>
@@ -18,9 +22,7 @@ export default {
       vehicles: [],
     };
   },
-  props: {
-    msg: String,
-  },
+  props: {},
   created() {
     axios.get("http://localhost:5000").then((Response) => {
       this.vehicles = Response.data;

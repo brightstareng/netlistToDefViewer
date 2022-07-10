@@ -54,7 +54,7 @@
               <div class="less">{{ row["Conn"][" From"] }}</div>
             </td>
             <td>
-              <div>{{ row["Pin To"] }}</div>
+              <div>{{ row["Pin From"] }}</div>
               <div>{{ row.Col }}</div>
               <div class="less">{{ row.Gauge }}</div>
             </td>
@@ -145,10 +145,13 @@ tbody tr td {
   color: #666;
 }
 
-thead {
+th {
   border-bottom: 2px solid black;
   color: gray;
+  background-color: white;
   font-size: smaller;
+  position: sticky;
+  top: 0;
 }
 
 tr td {
@@ -166,7 +169,7 @@ thead tr:first-of-type {
 }
 
 table {
-  margin-top: 3rem;
+  margin-top: 1rem;
   width: 100%;
   border-collapse: collapse;
 }
